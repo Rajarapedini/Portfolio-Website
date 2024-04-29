@@ -209,10 +209,12 @@
                 <div class="image-box">
                     <img draggable="false" src="./images/contact.png" alt="">
                 </div>
-                <form id="contact-form">
+                <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
 
                     <div class="form-group">
                         <div class="field">
+                            <input type="hidden" name="access_key" value="9607e84c-fbda-4c5c-928f-6931e4b02191">
+                            
                             <input type="text" name="name" placeholder="Name" required>
                             <i class='bx bx-user'></i>
                         </div>
@@ -232,6 +234,7 @@
                     <div class="button-area">
                         <button type="submit">
                             Submit <i class='bx bx-paper-plane'></i></i></button>
+                        
                     </div>
                 </form>
             </div>
@@ -296,6 +299,8 @@
 
 
     <!-- ==== ALL MAJOR JAVASCRIPT CDNS STARTS ==== -->
+
+    <script src="https://web3forms.com/client/script.js" async defer></script>
     <!-- jquery cdn -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
         integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
