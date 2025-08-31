@@ -21,12 +21,12 @@
     }
   },
   {
-    "name": "Indian Temples",
-    "desc": "It shows temples of different sectors of India. as user clicks it will redirect to wiki of that temple for info.",
-    "image": "templeweb",
-    "category": "basicweb",
+    "name": "Sort A Snap",
+    "desc": "Our smart AI recognizes faces and helps you seamlessly explore your photo collection, making reliving those special moments a breeze.",
+    "image": "sortasnap",
+    "category": "WEBAPP AND MOBILE APP",
     "links": {
-      "view": "#",
+      "view": "https://app.sortasnap.com/login",
       "code": "#"
     }
   },
@@ -49,5 +49,5 @@
       "view": "#",
       "code": "#"
     }
- }
+  }
 ]
