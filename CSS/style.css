@@ -7,14 +7,14 @@
     text-decoration: none;
     outline: none;
     border: none;
-    font-family: 'Poppins' sans-sarif;
+    font-family: 'Poppins', sans-serif;
 }
 
-.root {
+:root {
     --bg-color: #1f242d;
     --second-bg-color: #323946;
-    --text-color: white;
-    --main-color: #0ef;
+    --text-color: #1b1b1b;
+    --main-color: #1212d6;
 }
 
 html {
@@ -79,7 +79,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1.7rem 10%;
+    padding: 1.7rem 6%;
     height: 6.5rem;
     background-color: orange;
     box-shadow: 0 1px 4px rgba(125, 133, 141, 0.3);
@@ -88,6 +88,7 @@ header {
 section {
     min-height: 100vh;
     padding: 2rem 9%;
+    scroll-margin-top: 6.5rem;
 }
 
 .heading {
@@ -102,6 +103,9 @@ section {
 }
 
 header .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
     font-size: 1.9rem;
     font-weight: 800;
     text-decoration: none;
@@ -136,7 +140,7 @@ header .navbar ul li a {
     font-weight: 600;
     text-decoration: none;
     letter-spacing: 0.04rem;
-    transition: 0.8 ease;
+    transition: 0.3s ease;
 }
 
 header .navbar ul li a.active,
@@ -149,8 +153,14 @@ header .navbar ul li a:hover {
 /* navbar ends */
 
 /* hamburger icon starts*/
+#menu {
+  font-size: 3rem;
+  cursor: pointer;
+  color: #0e004e;
+  display: none;
+}
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   #menu {
     display: block;
   }
@@ -159,10 +169,13 @@ header .navbar ul li a:hover {
     top: 6.5rem;
     right: -120%;
     width: 75%;
-    height: 100%;
+    max-width: 32rem;
+    height: calc(100vh - 6.5rem);
+    overflow-y: auto;
     text-align: left;
     align-items: flex-start;
     background-color: #0e0f31;
+    transition: right 0.3s ease;
   }
   header .navbar ul {
     flex-flow: column;
@@ -173,7 +186,6 @@ header .navbar ul li a:hover {
     width: 100%;
     margin: 1rem 0;
     border-radius: 0.5rem;
-    width: 26rem;
   }
   header .navbar ul li a {
     display: block;
@@ -204,9 +216,11 @@ header .navbar ul li a:hover {
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    gap: 1.5rem;
+    gap: 3rem;
     min-height: 100vh;
     align-items: center;
+    padding-top: 10rem;
+    padding-bottom: 4rem;
 }
 
 .home #particles-js {
@@ -233,13 +247,16 @@ header .navbar ul li a:hover {
 }
 
 .home .image {
-    flex: 1 1 40rem;
+    flex: 1 1 32rem;
     z-index: 1;
+    text-align: center;
 }
 
 .home .image img {
-    width: 70%;
-    margin-left: 6rem;
+    width: 100%;
+    max-width: 40rem;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
     border-radius: 50%;
     box-shadow: 0 2px 8px rgba(38, 0, 255, 0.762);
     cursor: pointer;
@@ -254,13 +271,13 @@ header .navbar ul li a:hover {
     font-weight: 800;
     color: var(--bg-color);
 }
-.home .content h7 {
+.home .content .name {
     font-size: 5rem;
     font-weight: 800;
     color: blue;
 }
 
-.home .content h7 span {
+.home .content .name span {
     font-size: 5rem;
     font-weight: 800;
     color: red;
@@ -282,8 +299,9 @@ header .navbar ul li a:hover {
 
 .home .btn {
     margin-top: 1rem;
-    position: absolute;
-    line-height: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
     padding: 1.6rem 3rem;
     border-radius: 4em;
     transition: 0.5s;
@@ -316,7 +334,7 @@ header .navbar ul li a:hover {
 /* social icons start */
 .socials {
     position: relative;
-    margin-top: 9rem;
+    margin-top: 3rem;
   }
   .socials .social-icons {
     padding-left: 0;
@@ -366,19 +384,31 @@ header .navbar ul li a:hover {
   /* social icons end */
 
   /* hero media queries starts*/
-@media (max-width: 450px) {
-    .home .btn {
-      margin: 4rem 0;
+@media (max-width: 768px) {
+    .home {
+      flex-direction: column-reverse;
+      text-align: center;
+      padding-top: 9rem;
     }
-  
-    .socials {
-      margin-top: 12rem;
+
+    .home .content,
+    .home .image {
+      flex: 1 1 auto;
+      width: 100%;
     }
-  
+
+    .home .content h2,
+    .home .content .name,
+    .home .content .name span {
+      font-size: 3.6rem;
+    }
+
     .home .image img {
-      margin-top: -12rem;
+      max-width: 26rem;
     }
-  
+}
+
+@media (max-width: 450px) {
     .home .content p {
       font-size: 2.2rem;
     }
@@ -407,8 +437,9 @@ header .navbar ul li a:hover {
     flex: 1 1 35rem;
   }
   .about .row .image img {
-    margin: 4rem;
-    width: 30rem;
+    margin: 2rem auto;
+    width: 100%;
+    max-width: 30rem;
     height: auto;
     border-radius: 5%;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
@@ -420,7 +451,7 @@ header .navbar ul li a:hover {
     mix-blend-mode: normal;
   }
   .about .row .content {
-    flex: 1 1 45rem;
+    flex: 1 1 32rem;
     padding: 3rem;
   }
   .about .row .content h3 {
@@ -634,8 +665,7 @@ header .navbar ul li a:hover {
   }
   .skills .container .row {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    flex-wrap: wrap;
+    grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
     gap: 1.8rem;
   }
   .skills .container .bar {
@@ -664,7 +694,9 @@ header .navbar ul li a:hover {
     font-size: 2rem;
     font-weight: 500;
     font-family: "Poppins";
-    margin-left: 0.5rem;
+    text-align: center;
+    overflow-wrap: anywhere;
+    hyphens: none;
   }
   /* skills media queries starts*/
   @media screen and (max-width: 600px) {
@@ -673,7 +705,7 @@ header .navbar ul li a:hover {
       margin: 0;
     }
     .skills .container .row {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
       margin: 1rem;
       padding: 2rem 0.2rem 2rem 0.2rem;
       gap: 1rem;
@@ -924,7 +956,7 @@ header .navbar ul li a:hover {
     width: 100%;
     background: #fff;
     border-radius: 1.5rem;
-    margin: 2rem 5rem;
+    margin: 3rem auto;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
   }
   .contact .container .content {
@@ -1065,7 +1097,16 @@ header .navbar ul li a:hover {
     }
     .contact .content form {
       width: 100%;
-      margin-right: 2rem;
+      margin-right: 0;
+    }
+    .form-group .field,
+    form .message {
+      margin: 1rem 0;
+    }
+    form .button-area {
+      float: none;
+      justify-content: center;
+      margin-top: 1rem;
     }
   }
   /* contact section media queries ends */
@@ -1207,3 +1248,90 @@ header .navbar ul li a:hover {
   }
   /* scroll top ends */
   
+/* ===== responsive & touch fixes ===== */
+.contact .container .content::after { content: ""; display: block; clear: both; }
+
+.form-group .field,
+form .message {
+  width: auto;
+}
+
+/* project cards: on touch screens there is no hover, so show details by default */
+@media (hover: none) {
+  .work .box-container .box .content {
+    top: 35%;
+  }
+}
+
+@media (max-width: 600px) {
+  section {
+    padding: 2rem 5%;
+  }
+  .heading {
+    font-size: 2.8rem;
+  }
+  .work .box-container {
+    margin: 2rem 0;
+  }
+  .work .desc .btns .btn {
+    margin-right: 0;
+  }
+  .education .box-container .box,
+  .experience .box-container .box {
+    width: 100%;
+  }
+  .education .box-container .box .image,
+  .experience .box-container .box .image {
+    height: 18rem;
+    flex: none;
+  }
+  .education .box-container .box .content h3,
+  .experience .box-container .box .content h3 {
+    font-size: 2rem;
+  }
+  .education h4,
+  .experience h4 {
+    font-size: 1.6rem;
+  }
+  .education .box-container .box:hover,
+  .experience .box-container .box:hover {
+    transform: none;
+  }
+  #scroll-top.active {
+    top: calc(100% - 8rem);
+  }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+  .education .box-container .box,
+  .experience .box-container .box {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .experience .box-container .box img {
+    object-fit: contain;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .skills .container .row {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.8rem;
+    margin: 0.8rem;
+  }
+  .skills .container .bar {
+    padding: 0.8rem 0.4rem;
+    margin-bottom: 0;
+  }
+  .skills .container .bar .info span {
+    font-size: 1.4rem;
+    overflow-wrap: normal;
+  }
+  .skills .container .bar .info img {
+    width: 3.6rem;
+    height: 3.6rem;
+  }
+}

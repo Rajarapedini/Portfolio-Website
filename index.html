@@ -7,6 +7,8 @@
     <meta name="description"
         content="Welcome to Rajarao's Portfolio. Full-Stack Web Developer and Android App Developer" />
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" id="avatar" href="images/avatar.jpg">
     <link rel="stylesheet" href="CSS/style.css">
     <title>Rajarao | Portfolio</title>
 </head>
@@ -15,7 +17,7 @@
 
     <header>
         <a href="/" class="logo"><img src="images/logorr.png" alt="logo">Rajarao</a>
-        <!-- <div id="menu" class="bx bx-menu"></div> -->
+        <div id="menu" class="bx bx-menu" role="button" aria-label="Open menu"></div>
         <nav class="navbar">
             <ul>
                 <li><a class="active" href="#home">Home</a></li>
@@ -35,7 +37,7 @@
 
         <div class="content">
             <h2>Hello Friends,</h2>
-            <h7> It's me Rajarao <span>Pedini</span></h7>
+            <h1 class="name">It's me Rajarao <span>Pedini</span></h1>
             <p>I am into <span class="typing-text"></span></p>
             <a href="#about" class="btn"><span>About Me</span>
                 <i class="fas fa-arrow-circle-down"></i>
@@ -56,7 +58,7 @@
             </div>
         </div>
         <div class="image">
-            <img draggable="false" class="tilt" src="images/profile.jpg" alt="">
+            <img draggable="false" class="tilt" src="images/profile.jpg" alt="Rajarao Pedini">
         </div>
     </section>
     <!-- hero section ends -->
@@ -68,7 +70,7 @@
         <div class="row">
 
             <div class="image">
-                <img draggable="false" class="tilt" src="images/profile2.jpg" alt="">
+                <img draggable="false" class="tilt" src="images/profile2.jpg" alt="Rajarao Pedini">
             </div>
             <div class="content">
                 <h3>I'm Rajarao</h3>
@@ -138,7 +140,7 @@
     <!-- skills section starts -->
     <section class="skills" id="skills">
 
-        <h2 class="heading"><box-icon name='universal-access'><i class='bx bx-laptop' ></i></box-icon> Skills & <span>Abilities</span></h2>
+        <h2 class="heading"><i class='bx bx-laptop'></i> Skills & <span>Abilities</span></h2>
 
         <div class="container">
             <div class="row" id="skillsContainer">
@@ -221,7 +223,7 @@
     <!-- contact section starts -->
     <section class="contact" id="contact">
 
-        <h2 class="heading"><i class='bx bxs-contact'></i></i> Get in <span>Touch</span></h2>
+        <h2 class="heading"><i class='bx bxs-contact'></i> Get in <span>Touch</span></h2>
 
         <div class="container">
             <div class="content">
@@ -238,11 +240,11 @@
                             <i class='bx bx-user'></i>
                         </div>
                         <div class="field">
-                            <input type="text" name="email" placeholder="Email" required>
+                            <input type="email" name="email" placeholder="Email" required>
                             <i class='bx bxl-gmail'></i>
                         </div>
                         <div class="field">
-                            <input type="text" name="phone" placeholder="Phone">
+                            <input type="tel" name="phone" placeholder="Phone">
                             <i class='bx bx-phone'></i>
                         </div>
                         <div class="message">
@@ -254,7 +256,7 @@
                         <input type="hidden" name="redirect" value="https://web3forms.com/success">
                          <div class="h-captcha" data-captcha="true"></div>
                         <button type="submit">
-                            Submit <i class='bx bx-paper-plane'></i></i></button>
+                            Submit <i class='bx bx-paper-plane'></i></button>
                         
                     </div>
                 </form>
@@ -295,7 +297,7 @@
 
                     <a href="https://www.linkedin.com/in/pedinirajarao/" class="bx bxl-linkedin" aria-label="LinkedIn"
                         target="_blank"></a>
-                    <a href="https://github.com/Rajaraopedini" class="bx bxl-github" aria-label="GitHub"
+                    <a href="https://github.com/Rajarapedini" class="bx bxl-github" aria-label="GitHub"
                         target="_blank"></a>
                     <a href="mailto:rajaraopedinii@gmail.com" class="bx bxl-gmail" aria-label="Mail"
                         target="_blank"></a>
@@ -344,7 +346,6 @@
     <!-- scroll reveal anim -->
     <script src="https://unpkg.com/scrollreveal"></script>
 
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
     <!-- end of project -->
 

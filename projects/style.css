@@ -270,6 +270,18 @@ header .navbar ul li a:hover{
   background: #310ae0f5;
 }
 
+.work .box-container .grid-item .box{
+  width: min(38rem, calc(100vw - 4rem));
+  margin: 1rem;
+}
+.work .box-container .grid-item .box .content .tag h3{
+  text-transform: none;
+}
+@media (hover: none) {
+  .work .box-container .box .content{
+    top: 35%;
+  }
+}
 @media screen and (max-width: 450px) {
   .work .button-group{
     width: 100%;
@@ -278,7 +290,8 @@ header .navbar ul li a:hover{
     margin: 0rem;
   }
   .work .box-container .grid-item .box{
-    width: 95% !important;
+    width: calc(100vw - 4rem);
+    margin: 1rem 0;
   }
 }
 

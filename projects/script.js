@@ -1,12 +1,12 @@
 $(document).ready(function () {
 
     $('#menu').click(function () {
-        $(this).toggleClass('fa-times');
+        $(this).toggleClass('bx-menu bx-x');
         $('.navbar').toggleClass('nav-toggle');
     });
 
     $(window).on('scroll load', function () {
-        $('#menu').removeClass('fa-times');
+        $('#menu').removeClass('bx-x').addClass('bx-menu');
         $('.navbar').removeClass('nav-toggle');
 
         if (window.scrollY > 60) {
@@ -44,10 +44,11 @@ function showProjects(projects) {
     let projectsContainer = document.querySelector(".work .box-container");
     let projectsHTML = "";
     projects.forEach(project => {
+        const imgFile = /\.[a-z]+$/i.test(project.image) ? project.image : `${project.image}.png`;
         projectsHTML += `
         <div class="grid-item ${project.category}">
-        <div class="box tilt" style="width: 380px; margin: 1rem">
-      <img draggable="false" src="./images/projects/${projects.image}.png" alt="project" />
+        <div class="box tilt">
+      <img draggable="false" src="/images/projects/${imgFile}" alt="${project.name}" loading="lazy" />
       <div class="content">
         <div class="tag">
         <h3>${project.name}</h3>

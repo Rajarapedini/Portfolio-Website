@@ -1,13 +1,19 @@
 $(document).ready(function () {
 
+    function closeMenu() {
+        $('#menu').removeClass('bx-x').addClass('bx-menu');
+        $('.navbar').removeClass('nav-toggle');
+    }
+
     $('#menu').click(function () {
-        $(this).toggleClass('fa-times');
+        $(this).toggleClass('bx-menu bx-x');
         $('.navbar').toggleClass('nav-toggle');
     });
 
+    $('.navbar a').on('click', closeMenu);
+
     $(window).on('scroll load', function () {
-        $('#menu').removeClass('fa-times');
-        $('.navbar').removeClass('nav-toggle');
+        closeMenu();
 
         if (window.scrollY > 60) {
             document.querySelector('#scroll-top').classList.add('active');
@@ -30,29 +36,15 @@ $(document).ready(function () {
     });
 
     // smooth scrolling
-    $('a[href*="#"]').on('click', function (e) {
+    $('a[href^="#"]').on('click', function (e) {
+        const target = $($(this).attr('href'));
+        if (!target.length) return;
         e.preventDefault();
+        const headerHeight = $('header').outerHeight() || 0;
         $('html, body').animate({
-            scrollTop: $($(this).attr('href')).offset().top,
+            scrollTop: Math.max(target.offset().top - headerHeight, 0),
         }, 500, 'linear')
     });
-
-    // <!-- emailjs to mail contact form data -->
-    $("#contact-form").submit(function (event) {
-        emailjs.init("user_TTDmetQLYgWCLzHTDgqxm");
-
-        emailjs.sendForm('contact_service', 'template_contact', '#contact-form')
-            .then(function (response) {
-                console.log('SUCCESS!', response.status, response.text);
-                document.getElementById("contact-form").reset();
-                alert("Form Submitted Successfully");
-            }, function (error) {
-                console.log('FAILED...', error);
-                alert("Form Submission Failed! Try Again");
-            });
-        event.preventDefault();
-    });
-    // <!-- emailjs to mail contact form data -->
 
 });
 
@@ -107,9 +99,10 @@ function showProjects(projects) {
     let projectsContainer = document.querySelector("#work .box-container");
     let projectHTML = "";
     projects.slice(0, 10).filter(project => project.category != "android").forEach(project => {
+        const imgFile = /\.[a-z]+$/i.test(project.image) ? project.image : `${project.image}.png`;
         projectHTML += `
         <div class="box tilt">
-      <img draggable="false" src="/images/projects/${project.image}.png" alt="project" />
+      <img draggable="false" src="/images/projects/${imgFile}" alt="${project.name}" loading="lazy" />
       <div class="content">
         <div class="tag">
         <h3>${project.name}</h3>
@@ -127,9 +120,11 @@ function showProjects(projects) {
     projectsContainer.innerHTML = projectHTML;
 
     // <!-- tilt js effect starts -->
-    VanillaTilt.init(document.querySelectorAll(".tilt"), {
-        max: 15,
-    });
+    if (window.matchMedia('(hover: hover)').matches) {
+        VanillaTilt.init(document.querySelectorAll(".tilt"), {
+            max: 15,
+        });
+    }
     // <!-- tilt js effect ends -->
 
     /* ===== SCROLL REVEAL ANIMATION ===== */
@@ -154,9 +149,11 @@ fetchData("projects").then(data => {
 });
 
 // <!-- tilt js effect starts -->
-VanillaTilt.init(document.querySelectorAll(".tilt"), {
-    max: 15,
-});
+if (window.matchMedia('(hover: hover)').matches) {
+    VanillaTilt.init(document.querySelectorAll(".tilt"), {
+        max: 15,
+    });
+}
 // <!-- tilt js effect ends -->
 
 // disable developer mode
