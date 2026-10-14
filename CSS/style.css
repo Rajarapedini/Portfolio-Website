@@ -1282,8 +1282,15 @@ header .navbar ul li a:hover {
     background: #ffae00;
     transform: translateY(-0.3rem);
   }
+  /* move back-to-top to the left on mobile so it doesn't overlap the chat widget */
+  @media (max-width: 768px) {
+    #scroll-top {
+      left: 2rem;
+      right: auto;
+    }
+  }
   /* scroll top ends */
-  
+
 @media (max-width: 600px) {
   section {
     padding: 2rem 5%;
