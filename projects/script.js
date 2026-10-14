@@ -20,7 +20,7 @@ $(document).ready(function () {
 document.addEventListener('visibilitychange',
     function () {
         if (document.visibilityState === "visible") {
-            document.title = "Projects | Portfolio Rajarao";
+            document.title = "Projects | Rajarao Pedini";
             $("#favcon").attr("href", "/images/avatar.jpg");
         }
         else {

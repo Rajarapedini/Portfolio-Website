@@ -51,7 +51,7 @@ $(document).ready(function () {
 document.addEventListener('visibilitychange',
     function () {
         if (document.visibilityState === "visible") {
-            document.title = "Portfolio | Rajarao";
+            document.title = "Rajarao Pedini | Software QA Engineer - Portfolio";
             $("#avatar").attr("href", "images/avatar.jpg");
         }
         else {
