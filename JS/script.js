@@ -95,37 +95,46 @@ function showSkills(skills) {
     skillsContainer.innerHTML = skillHTML;
 }
 
+const categoryLabels = {
+    mern: "MERN Stack",
+    lamp: "LAMP Stack",
+    basicweb: "Web",
+    android: "Android App"
+};
+
+function projectCard(project) {
+    const imgFile = /\.[a-z]+$/i.test(project.image) ? project.image : `${project.image}.png`;
+    const label = categoryLabels[project.category] || project.category;
+    const hasLink = url => url && url !== "#";
+    let btns = "";
+    if (hasLink(project.links.view)) {
+        btns += `<a href="${project.links.view}" class="btn" target="_blank" rel="noopener"><i class="fas fa-eye"></i> Live</a>`;
+    }
+    if (hasLink(project.links.code)) {
+        btns += `<a href="${project.links.code}" class="btn outline" target="_blank" rel="noopener"><i class="fas fa-code"></i> Code</a>`;
+    }
+    if (!btns) {
+        btns = `<span class="soon">Links coming soon</span>`;
+    }
+    return `
+    <div class="box ${project.category}">
+      <div class="image">
+        <img draggable="false" src="/images/projects/${imgFile}" alt="${project.name}" loading="lazy" />
+      </div>
+      <div class="content">
+        <span class="category">${label}</span>
+        <h3>${project.name}</h3>
+        <p>${project.desc}</p>
+        <div class="btns">${btns}</div>
+      </div>
+    </div>`;
+}
+
 function showProjects(projects) {
     let projectsContainer = document.querySelector("#work .box-container");
-    let projectHTML = "";
-    projects.slice(0, 10).filter(project => project.category != "android").forEach(project => {
-        const imgFile = /\.[a-z]+$/i.test(project.image) ? project.image : `${project.image}.png`;
-        projectHTML += `
-        <div class="box tilt">
-      <img draggable="false" src="/images/projects/${imgFile}" alt="${project.name}" loading="lazy" />
-      <div class="content">
-        <div class="tag">
-        <h3>${project.name}</h3>
-        </div>
-        <div class="desc">
-          <p>${project.desc}</p>
-          <div class="btns">
-            <a href="${project.links.view}" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
-            <a href="${project.links.code}" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>`
-    });
-    projectsContainer.innerHTML = projectHTML;
-
-    // <!-- tilt js effect starts -->
-    if (window.matchMedia('(hover: hover)').matches) {
-        VanillaTilt.init(document.querySelectorAll(".tilt"), {
-            max: 15,
-        });
-    }
-    // <!-- tilt js effect ends -->
+    projectsContainer.innerHTML = projects.slice(0, 10)
+        .filter(project => project.category != "android")
+        .map(projectCard).join("");
 
     /* ===== SCROLL REVEAL ANIMATION ===== */
     const srtop = ScrollReveal({

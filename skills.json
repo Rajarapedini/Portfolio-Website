@@ -1,122 +1,146 @@
 [
     {
-        "name": "ReactJS",
-        "icon": "https://img.icons8.com/external-tal-revivo-color-tal-revivo/48/000000/external-react-a-javascript-library-for-building-user-interfaces-logo-color-tal-revivo.png"
+        "name": "Apache POI",
+        "icon": "https://www.vectorlogo.zone/logos/apache/apache-icon.svg"
     },
     {
-        "name": "ExpressJS",
-        "icon": "https://img.icons8.com/fluency/48/000000/node-js.png"
+        "name": "Appium",
+        "icon": "https://cdn.worldvectorlogo.com/logos/appium.svg"
     },
     {
-        "name": "NodeJS",
-        "icon": "https://img.icons8.com/color/48/000000/nodejs.png"
+        "name": "Applitools",
+        "icon": "https://www.google.com/s2/favicons?domain=applitools.com&sz=64"
     },
     {
-        "name": "Redux",
-        "icon": "https://img.icons8.com/color/48/000000/redux.png"
+        "name": "BrowserStack",
+        "icon": "https://www.vectorlogo.zone/logos/browserstack/browserstack-icon.svg"
     },
     {
-        "name": "Firebase",
-        "icon": "https://img.icons8.com/color/48/000000/firebase.png"
+        "name": "ChatGPT",
+        "icon": "https://img.icons8.com/fluency/48/chatgpt.png"
     },
     {
-        "name": "Android",
-        "icon": "https://img.icons8.com/fluency/48/000000/android-os.png"
+        "name": "Claude",
+        "icon": "https://registry.npmmirror.com/@lobehub/icons-static-png/latest/files/dark/claude-color.png"
     },
     {
-        "name": "MaterialUI",
-        "icon": "https://img.icons8.com/color/48/000000/material-ui.png"
+        "name": "Codium AI",
+        "icon": "https://www.google.com/s2/favicons?domain=codium.ai&sz=64"
     },
     {
-        "name": "ChakraUI",
-        "icon": "https://img.icons8.com/color/48/000000/chakra-ui.png"
+        "name": "Cucumber",
+        "icon": "https://img.icons8.com/color/48/cucumber.png"
     },
     {
-        "name": "TailwindCSS",
-        "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/48px-Tailwind_CSS_Logo.png"
+        "name": "Cypress",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cypressio/cypressio-original.svg"
     },
     {
-        "name": "Bootstrap",
-        "icon": "https://img.icons8.com/color/48/000000/bootstrap.png"
+        "name": "Docker",
+        "icon": "https://img.icons8.com/color/48/docker.png"
     },
     {
-        "name": "Sass",
-        "icon": "https://img.icons8.com/color/48/000000/sass.png"
+        "name": "Eclipse",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/eclipse/eclipse-original.svg"
     },
     {
-        "name": "HTML5",
-        "icon": "https://img.icons8.com/color/48/000000/html-5--v1.png"
-    },
-    {
-        "name": "CSS3",
-        "icon": "https://img.icons8.com/color/48/000000/css3.png"
-    },
-    {
-        "name": "JavaScript",
-        "icon": "https://img.icons8.com/color/48/000000/javascript--v1.png"
-    },
-    {
-        "name": "Java",
-        "icon": "https://img.icons8.com/color/48/000000/java-coffee-cup-logo--v1.png"
-    },
-    {
-        "name": "Kotlin",
-        "icon": "https://img.icons8.com/color/48/000000/kotlin.png"
-    },
-    {
-        "name": "PHP",
-        "icon": "https://img.icons8.com/offices/48/000000/php-logo.png"
-    },
-    {
-        "name": "Python",
-        "icon": "https://img.icons8.com/color/48/000000/python--v1.png"
-    },
-    {
-        "name": "C++",
-        "icon": "https://img.icons8.com/color/48/000000/c-plus-plus-logo.png"
-    },
-    {
-        "name": "MongoDB",
-        "icon": "https://img.icons8.com/color/48/000000/mongodb.png"
-    },
-    {
-        "name": "MySQL",
-        "icon": "https://img.icons8.com/color/48/000000/mysql-logo.png"
-    },
-    {
-        "name": "PostgreSQL",
-        "icon": "https://img.icons8.com/color/48/000000/postgreesql.png"
-    },
-    {
-        "name": "AWS",
-        "icon": "https://img.icons8.com/color/48/000000/amazon-web-services.png"
-    },
-    {
-        "name": "Heroku",
-        "icon": "https://img.icons8.com/color/48/000000/heroku.png"
-    },
-    {
-        "name": "Netlify",
-        "icon": "https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/48/000000/external-netlify-a-cloud-computing-company-that-offers-hosting-and-serverless-backend-services-for-static-websites-logo-shadow-tal-revivo.png"
-    },
-    {
-        "name": "DigitalOcean",
-        "icon": "https://img.icons8.com/ios-filled/48/0080FF/digitalocean.png"
-    },
-    {
-        "name": "jQuery",
-        "icon": "https://img.icons8.com/ios-filled/48/1169ae/jquery.png"
-    },
-    {
-        "name": "Git VCS",
-        "icon": "https://img.icons8.com/color/48/000000/git.png"
+        "name": "Functionize",
+        "icon": "https://www.google.com/s2/favicons?domain=functionize.com&sz=64"
     },
     {
         "name": "GitHub",
         "icon": "https://img.icons8.com/glyph-neue/48/ffffff/github.png"
     },
     {
-        "name": "WordPress",
-        "icon": "https://img.icons8.com/color/48/000000/wordpress.png"
-    }    
+        "name": "GitLab",
+        "icon": "https://img.icons8.com/color/48/gitlab.png"
+    },
+    {
+        "name": "IntelliJ IDEA",
+        "icon": "https://img.icons8.com/color/48/intellij-idea.png"
+    },
+    {
+        "name": "Java",
+        "icon": "https://img.icons8.com/color/48/java-coffee-cup-logo--v1.png"
+    },
+    {
+        "name": "JavaScript",
+        "icon": "https://img.icons8.com/color/48/javascript--v1.png"
+    },
+    {
+        "name": "Jenkins",
+        "icon": "https://img.icons8.com/color/48/jenkins.png"
+    },
+    {
+        "name": "Jira",
+        "icon": "https://img.icons8.com/color/48/jira.png"
+    },
+    {
+        "name": "JMeter",
+        "icon": "https://jmeter.apache.org/images/jmeter_square.png"
+    },
+    {
+        "name": "JUnit",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/junit/junit-original.svg"
+    },
+    {
+        "name": "Karate",
+        "icon": "https://github.com/karatelabs.png"
+    },
+    {
+        "name": "Katalon Studio",
+        "icon": "https://www.google.com/s2/favicons?domain=katalon.com&sz=64"
+    },
+    {
+        "name": "Maven",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/maven/maven-original.svg"
+    },
+    {
+        "name": "MongoDB",
+        "icon": "https://img.icons8.com/color/48/mongodb.png"
+    },
+    {
+        "name": "MySQL",
+        "icon": "https://img.icons8.com/color/48/mysql-logo.png"
+    },
+    {
+        "name": "Playwright",
+        "icon": "https://playwright.dev/img/playwright-logo.svg"
+    },
+    {
+        "name": "PostgreSQL",
+        "icon": "https://img.icons8.com/color/48/postgreesql.png"
+    },
+    {
+        "name": "Postman",
+        "icon": "https://img.icons8.com/dusk/48/postman-api.png"
+    },
+    {
+        "name": "Python",
+        "icon": "https://img.icons8.com/color/48/python--v1.png"
+    },
+    {
+        "name": "REST Assured",
+        "icon": "https://img.icons8.com/color/48/api.png"
+    },
+    {
+        "name": "Selenium",
+        "icon": "https://img.icons8.com/color/48/selenium-test-automation.png"
+    },
+    {
+        "name": "TestFlight",
+        "icon": "https://img.icons8.com/fluency/48/testflight.png"
+    },
+    {
+        "name": "Testim",
+        "icon": "https://www.google.com/s2/favicons?domain=testim.io&sz=64"
+    },
+    {
+        "name": "testRigor",
+        "icon": "https://www.google.com/s2/favicons?domain=testrigor.com&sz=64"
+    },
+    {
+        "name": "VS Code",
+        "icon": "https://img.icons8.com/color/48/visual-studio-code-2019.png"
+    }
 ]

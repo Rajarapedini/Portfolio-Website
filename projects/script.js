@@ -40,65 +40,44 @@ function getProjects() {
 }
 
 
+const categoryLabels = {
+    mern: "MERN Stack",
+    lamp: "LAMP Stack",
+    basicweb: "Web",
+    android: "Android App"
+};
+
+function projectCard(project) {
+    const imgFile = /\.[a-z]+$/i.test(project.image) ? project.image : `${project.image}.png`;
+    const label = categoryLabels[project.category] || project.category;
+    const hasLink = url => url && url !== "#";
+    let btns = "";
+    if (hasLink(project.links.view)) {
+        btns += `<a href="${project.links.view}" class="btn" target="_blank" rel="noopener"><i class="fas fa-eye"></i> Live</a>`;
+    }
+    if (hasLink(project.links.code)) {
+        btns += `<a href="${project.links.code}" class="btn outline" target="_blank" rel="noopener"><i class="fas fa-code"></i> Code</a>`;
+    }
+    if (!btns) {
+        btns = `<span class="soon">Links coming soon</span>`;
+    }
+    return `
+    <div class="box ${project.category}">
+      <div class="image">
+        <img draggable="false" src="/images/projects/${imgFile}" alt="${project.name}" loading="lazy" />
+      </div>
+      <div class="content">
+        <span class="category">${label}</span>
+        <h3>${project.name}</h3>
+        <p>${project.desc}</p>
+        <div class="btns">${btns}</div>
+      </div>
+    </div>`;
+}
+
 function showProjects(projects) {
     let projectsContainer = document.querySelector(".work .box-container");
-    let projectsHTML = "";
-    projects.forEach(project => {
-        const imgFile = /\.[a-z]+$/i.test(project.image) ? project.image : `${project.image}.png`;
-        projectsHTML += `
-        <div class="grid-item ${project.category}">
-        <div class="box tilt">
-      <img draggable="false" src="/images/projects/${imgFile}" alt="${project.name}" loading="lazy" />
-      <div class="content">
-        <div class="tag">
-        <h3>${project.name}</h3>
-        </div>
-        <div class="desc">
-          <p>${project.desc}</p>
-          <div class="btns">
-            <a href="${project.links.view}" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
-            <a href="${project.links.code}" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-    </div>`
-    });
-    projectsContainer.innerHTML = projectsHTML;
-
-    // vanilla tilt.js
-    // VanillaTilt.init(document.querySelectorAll(".tilt"), {
-    //     max: 20,
-    // });
-    // // vanilla tilt.js  
-
-    // /* ===== SCROLL REVEAL ANIMATION ===== */
-    // const srtop = ScrollReveal({
-    //     origin: 'bottom',
-    //     distance: '80px',
-    //     duration: 1000,
-    //     reset: true
-    // });
-
-    // /* SCROLL PROJECTS */
-    // srtop.reveal('.work .box', { interval: 200 });
-
-    // isotope filter products
-    var $grid = $('.box-container').isotope({
-        itemSelector: '.grid-item',
-        layoutMode: 'fitRows',
-        masonry: {
-            columnWidth: 200
-        }
-    });
-
-    // filter items on button click
-    $('.button-group').on('click', 'button', function () {
-        $('.button-group').find('.is-checked').removeClass('is-checked');
-        $(this).addClass('is-checked');
-        var filterValue = $(this).attr('data-filter');
-        $grid.isotope({ filter: filterValue });
-    });
+    projectsContainer.innerHTML = projects.map(projectCard).join("");
 }
 
 getProjects().then(data => {
