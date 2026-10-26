@@ -222,9 +222,22 @@
     flex-direction: row;
     text-align: left;
   }
+  /* label flows below the last item, aligned with the line, so it never clips */
+  .timeline {
+    padding-bottom: 1rem;
+  }
   .tl-start {
-    left: 2rem;
-    transform: translateX(-50%);
+    position: static;
+    transform: none;
+    left: auto;
+    bottom: auto;
+    margin: 1.5rem 0 0 1rem;
+    white-space: normal;
+  }
+  /* no chat widget on this page, so keep scroll-top on the right (avoids overlap) */
+  #scroll-top {
+    left: auto;
+    right: 2rem;
   }
 }
 
