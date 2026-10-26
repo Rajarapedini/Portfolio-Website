@@ -245,3 +245,39 @@
 .tl-logo.tl-logo-dark {
   background: #0d1b4b;
 }
+
+/* Back to Home button (journey page has no base .backbtn styles) */
+.journey .backbtn {
+  display: flex;
+  justify-content: center;
+  margin: 4rem 0 1rem;
+}
+.journey .backbtn .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 1.4rem 2.8rem;
+  border-radius: 0.8rem;
+  font-weight: 700;
+  font-family: "Nunito", sans-serif;
+  color: #fff;
+  background: #2506ad;
+  border: 2px solid #2506ad;
+  box-shadow: 0 0.5rem 1.2rem rgba(48, 68, 247, 0.3);
+  transition: 0.3s;
+}
+.journey .backbtn .btn span {
+  color: #fff;
+  font-size: 1.6rem;
+}
+.journey .backbtn .btn i {
+  font-size: 1.9rem;
+  transition: 0.3s;
+}
+.journey .backbtn .btn:hover {
+  background: #421cec;
+  border-color: #421cec;
+}
+.journey .backbtn .btn:hover i {
+  transform: translateX(-4px);
+}
