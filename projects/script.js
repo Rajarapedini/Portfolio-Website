@@ -50,9 +50,11 @@ const categoryLabels = {
 function projectCard(project) {
     const imgFile = /\.[a-z]+$/i.test(project.image) ? project.image : `${project.image}.png`;
     const label = categoryLabels[project.category] || project.category;
-    const hasLink = url => url && url !== "#";
+    const hasLink = url => url && url !== "#"; 
     let btns = "";
-    if (hasLink(project.links.view)) {
+    if (project.self) {
+        btns += `<a href="/" class="btn" data-self="true"><i class="fas fa-eye"></i> Live</a>`;
+    } else if (hasLink(project.links.view)) {
         btns += `<a href="${project.links.view}" class="btn" target="_blank" rel="noopener"><i class="fas fa-eye"></i> Live</a>`;
     }
     if (hasLink(project.links.code)) {
@@ -77,7 +79,7 @@ function projectCard(project) {
 
 function showProjects(projects) {
     let projectsContainer = document.querySelector(".work .box-container");
-    projectsContainer.innerHTML = projects.map(projectCard).join("");
+    projectsContainer.innerHTML = projects.filter(project => !project.hidden).map(projectCard).join("");
 }
 
 getProjects().then(data => {

@@ -1,13 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://rajaraopedini.vercel.app/</loc>
-    <lastmod>2026-10-14</lastmod>
+    <loc>https://www.rajaraopedini.in/</loc>
+    <lastmod>2026-10-26</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://rajaraopedini.vercel.app/projects/</loc>
-    <lastmod>2026-10-14</lastmod>
+    <loc>https://www.rajaraopedini.in/about/</loc>
+    <lastmod>2026-10-26</lastmod>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.rajaraopedini.in/projects/</loc>
+    <lastmod>2026-10-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.rajaraopedini.in/experience/</loc>
+    <lastmod>2026-10-26</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.rajaraopedini.in/experience/vanix/</loc>
+    <lastmod>2026-10-26</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.rajaraopedini.in/experience/tabdelta/</loc>
+    <lastmod>2026-10-26</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.rajaraopedini.in/experience/curebits/</loc>
+    <lastmod>2026-10-26</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.rajaraopedini.in/experience/qspiders/</loc>
+    <lastmod>2026-10-26</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.rajaraopedini.in/experience/niket/</loc>
+    <lastmod>2026-10-26</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.rajaraopedini.in/experience/cloud9/</loc>
+    <lastmod>2026-10-26</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.rajaraopedini.in/experience/nielit/</loc>
+    <lastmod>2026-10-26</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.rajaraopedini.in/experience/infolabz/</loc>
+    <lastmod>2026-10-26</lastmod>
+    <priority>0.5</priority>
   </url>
 </urlset>

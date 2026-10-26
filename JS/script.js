@@ -51,7 +51,7 @@ $(document).ready(function () {
 document.addEventListener('visibilitychange',
     function () {
         if (document.visibilityState === "visible") {
-            document.title = "Rajarao Pedini | Software QA Engineer - Portfolio";
+            document.title = "Rajarao Pedini | Software QA Engineer | rajaraopedini.in";
             $("#avatar").attr("href", "images/avatar.jpg");
         }
         else {
@@ -107,7 +107,9 @@ function projectCard(project) {
     const label = categoryLabels[project.category] || project.category;
     const hasLink = url => url && url !== "#";
     let btns = "";
-    if (hasLink(project.links.view)) {
+    if (project.self) {
+        btns += `<a href="/" class="btn" data-self="true"><i class="fas fa-eye"></i> Live</a>`;
+    } else if (hasLink(project.links.view)) {
         btns += `<a href="${project.links.view}" class="btn" target="_blank" rel="noopener"><i class="fas fa-eye"></i> Live</a>`;
     }
     if (hasLink(project.links.code)) {
@@ -132,8 +134,9 @@ function projectCard(project) {
 
 function showProjects(projects) {
     let projectsContainer = document.querySelector("#work .box-container");
-    projectsContainer.innerHTML = projects.slice(0, 10)
-        .filter(project => project.category != "android")
+    projectsContainer.innerHTML = projects
+        .filter(project => !project.hidden && project.category != "android")
+        .slice(0, 10)
         .map(projectCard).join("");
 
     /* ===== SCROLL REVEAL ANIMATION ===== */
@@ -242,3 +245,32 @@ srtop.reveal('.experience .timeline .container', { interval: 400 });
 
 /* SCROLL CONTACT */
 srtop.reveal('.contact .container', { delay: 200, reset: false });
+
+/* ===== "Live" on the portfolio card itself: scroll to top + friendly toast ===== */
+(function () {
+    function showToast(msg) {
+        let toast = document.getElementById('self-toast');
+        if (!toast) {
+            toast = document.createElement('div');
+            toast.id = 'self-toast';
+            toast.className = 'toast';
+            document.body.appendChild(toast);
+        }
+        toast.textContent = msg;
+        // force reflow so the transition runs each time
+        void toast.offsetWidth;
+        toast.classList.add('show');
+        clearTimeout(showToast._t);
+        showToast._t = setTimeout(function () {
+            toast.classList.remove('show');
+        }, 2600);
+    }
+
+    document.addEventListener('click', function (e) {
+        const link = e.target.closest('a[data-self]');
+        if (!link) return;
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        showToast("You're here only! 😄");
+    });
+})();

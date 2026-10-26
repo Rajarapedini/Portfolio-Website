@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Rajarao Pedini at Cloud9 Softech — a web development internship building responsive client websites, dynamic landing pages, portfolio pages and admin panels." />
+    <link rel="canonical" href="https://www.rajaraopedini.in/experience/cloud9/" />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="/CSS/style.css" />
+    <link rel="stylesheet" href="/about/about.css" />
+    <link rel="stylesheet" href="/experience/cloud9/style.css" />
+    <link rel="icon" id="favcon" href="/images/avatar.jpg" />
+    <title>Cloud9 Softech · My Role | Rajarao Pedini</title>
+</head>
+
+<body>
+    <!-- navbar starts -->
+    <header>
+        <a href="/" class="logo"><img src="/images/logorr.png" alt="Rajarao Pedini logo">Rajarao</a>
+        <div id="menu" class="bx bx-menu" role="button" aria-label="Open menu"></div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="/#home">Home</a></li>
+                <li><a href="/#about">About</a></li>
+                <li><a href="/#skills">Skills</a></li>
+                <li><a href="/#education">Education</a></li>
+                <li><a class="active" href="/#experience">Experience</a></li>
+                <li><a href="/#work">Work</a></li>
+                <li><a href="/#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- navbar ends -->
+
+    <section class="about-page">
+        <h2 class="heading"><i class="bx bxs-briefcase"></i> My Role at <span>Cloud9 Softech</span></h2>
+
+        <!-- hero -->
+        <div class="bio-hero">
+            <div class="photo">
+                <img draggable="false" src="/images/cloud9logo.png" alt="Cloud9 Softech" />
+            </div>
+            <div class="intro">
+                <h3>Web Developer</h3>
+                <span class="role">Cloud9 Softech · Web Developer · Vapi · 15 Jan 2024 – 20 Apr 2024</span>
+                <p>During my internship at Cloud9 Softech I gained hands-on expertise in web development,
+                    working on client-based projects. It empowered me to communicate insights
+                    effectively and helped me gain many practical skills.</p>
+                <div class="hero-btns">
+                    <a href="/#experience" class="btn outline"><span>Back to experience</span> <i
+                            class="fas fa-arrow-left"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- highlights -->
+        <div class="bio-body">
+            <div class="facts">
+                <div class="fact">
+                    <span class="fact-label">Role</span>
+                    <span class="fact-value">Web Developer</span>
+                </div>
+                <div class="fact">
+                    <span class="fact-label">Focus</span>
+                    <span class="fact-value">Client websites</span>
+                </div>
+                <div class="fact">
+                    <span class="fact-label">Built</span>
+                    <span class="fact-value">Landing &amp; portfolio pages</span>
+                </div>
+                <div class="fact">
+                    <span class="fact-label">Extras</span>
+                    <span class="fact-value">Admin panel · Responsive</span>
+                </div>
+            </div>
+
+            <div class="bio-section">
+                <h4><i class="fas fa-laptop-code"></i> Client-based projects</h4>
+                <ul>
+                    <li>Worked on client-based web development projects from start to finish.</li>
+                    <li>Built fully responsive websites and landing pages that worked across
+                        devices.</li>
+                </ul>
+            </div>
+
+            <div class="bio-section">
+                <h4><i class="fas fa-wand-magic-sparkles"></i> What I built</h4>
+                <ul>
+                    <li>Created dynamic landing pages and portfolio pages.</li>
+                    <li>Added an admin panel so content could be managed easily.</li>
+                </ul>
+            </div>
+
+            <div class="bio-section">
+                <h4><i class="fas fa-arrow-trend-up"></i> What I gained</h4>
+                <ul>
+                    <li>Strengthened my frontend and web development skills through real projects.</li>
+                    <li>Learned to communicate insights effectively while working with clients.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="backbtn">
+            <a href="/#experience" class="btn">
+                <i class="bx bx-left-arrow-alt"></i>
+                <span>Back to Home</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- scroll top btn -->
+    <a href="#" aria-label="ScrollTop" class="bx bx-chevron-up-circle" id="scroll-top"></a>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#menu').click(function () {
+                $(this).toggleClass('bx-menu bx-x');
+                $('.navbar').toggleClass('nav-toggle');
+            });
+            $(window).on('scroll load', function () {
+                $('#menu').removeClass('bx-x').addClass('bx-menu');
+                $('.navbar').removeClass('nav-toggle');
+                if (window.scrollY > 60) {
+                    document.querySelector('#scroll-top').classList.add('active');
+                } else {
+                    document.querySelector('#scroll-top').classList.remove('active');
+                }
+            });
+            $('#scroll-top').on('click', function (e) {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        });
+        if (window.matchMedia('(hover: hover)').matches && window.VanillaTilt) {
+            VanillaTilt.init(document.querySelector('.bio-hero .photo img'), { max: 10, speed: 400, glare: true, 'max-glare': 0.18 });
+        }
+        document.addEventListener('visibilitychange', function () {
+            if (document.visibilityState === 'visible') {
+                document.title = 'Cloud9 Softech · My Role | Rajarao Pedini';
+                $('#favcon').attr('href', '/images/avatar.jpg');
+            } else {
+                document.title = 'Come Back To Portfolio';
+                $('#favcon').attr('href', '/images/favhand.png');
+            }
+        });
+    </script>
+</body>
+
+</html>

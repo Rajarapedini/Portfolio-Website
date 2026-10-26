@@ -1,0 +1,234 @@
+/* ===== Career journey timeline page ===== */
+.journey {
+  background: #eef2fb;
+  padding-top: 10rem;
+  padding-bottom: 4rem;
+  min-height: 100vh;
+}
+.journey .journey-sub {
+  max-width: 70rem;
+  margin: 1rem auto 0;
+  text-align: center;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: #555;
+}
+
+/* timeline frame */
+.timeline {
+  position: relative;
+  max-width: 100rem;
+  margin: 5rem auto 0;
+  padding-bottom: 4rem;
+}
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 4px;
+  margin-left: -2px;
+  background: linear-gradient(#2506ad, #4b1fa8);
+  border-radius: 2px;
+}
+
+/* each entry */
+.tl-item {
+  position: relative;
+  width: 50%;
+  box-sizing: border-box;
+  padding: 1.5rem 4rem 1.5rem 0;
+  margin-bottom: 1rem;
+}
+.tl-item.left {
+  left: 0;
+  text-align: right;
+}
+.tl-item.right {
+  left: 50%;
+  padding: 1.5rem 0 1.5rem 4rem;
+  text-align: left;
+}
+
+/* dot on the central line */
+.tl-dot {
+  position: absolute;
+  top: 2.6rem;
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 50%;
+  background: #fff;
+  border: 4px solid #2506ad;
+  z-index: 2;
+}
+.tl-item.left .tl-dot {
+  right: -0.9rem;
+}
+.tl-item.right .tl-dot {
+  left: -0.9rem;
+}
+
+/* date label */
+.tl-date {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #2506ad;
+  font-family: "Nunito", sans-serif;
+  margin-bottom: 1rem;
+}
+
+/* clickable card */
+.tl-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+  text-align: left;
+  background: #fff;
+  border-radius: 1rem;
+  padding: 1.4rem 1.6rem;
+  box-shadow: 0 0.6rem 1.8rem rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  cursor: pointer;
+  color: inherit;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.tl-item.left .tl-card {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+.tl-card:hover {
+  transform: translateY(-0.4rem);
+  box-shadow: 0 1rem 2.4rem rgba(0, 0, 0, 0.18);
+}
+.tl-logo {
+  flex: 0 0 6.5rem;
+  width: 6.5rem;
+  height: 6.5rem;
+  border-radius: 0.8rem;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f3f0fb;
+}
+.tl-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 0.6rem;
+}
+.tl-logo .logo-text {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #2506ad, #4b1fa8);
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 800;
+  font-family: "Nunito", sans-serif;
+}
+.tl-info {
+  flex: 1;
+}
+.tl-info h3 {
+  font-size: 1.8rem;
+  color: #0e2431;
+}
+.tl-info p {
+  font-size: 1.35rem;
+  color: #666;
+  margin-top: 0.3rem;
+}
+
+/* hover hint */
+.tl-card .hover-hint {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(14, 14, 44, 0.55);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+.tl-card:hover .hover-hint {
+  opacity: 1;
+}
+.tl-card .hint-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.9rem 1.8rem;
+  border-radius: 3rem;
+  background: #2506ad;
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 700;
+  font-family: "Nunito", sans-serif;
+  box-shadow: 0 0.5rem 1.4rem rgba(0, 0, 0, 0.35);
+}
+.tl-card .hint-pill i {
+  transition: 0.3s;
+}
+.tl-card:hover .hint-pill i {
+  transform: translateX(5px);
+}
+
+/* "where it began" tag at the bottom of the line */
+.tl-start {
+  position: absolute;
+  bottom: -1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: #2506ad;
+  color: #fff;
+  font-size: 1.35rem;
+  font-weight: 700;
+  font-family: "Nunito", sans-serif;
+  padding: 0.8rem 1.6rem;
+  border-radius: 3rem;
+  white-space: nowrap;
+  box-shadow: 0 0.5rem 1.4rem rgba(37, 6, 173, 0.3);
+}
+
+/* mobile: single column, line on the left */
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 2rem;
+  }
+  .tl-item,
+  .tl-item.left,
+  .tl-item.right {
+    width: 100%;
+    left: 0;
+    text-align: left;
+    padding: 1rem 0 1rem 5rem;
+  }
+  .tl-item.left .tl-dot,
+  .tl-item.right .tl-dot {
+    left: 1.1rem;
+    right: auto;
+  }
+  .tl-item.left .tl-card {
+    flex-direction: row;
+    text-align: left;
+  }
+  .tl-start {
+    left: 2rem;
+    transform: translateX(-50%);
+  }
+}
+
+/* Cloud9 logo is white, so its tile needs a dark background */
+.tl-logo.tl-logo-dark {
+  background: #0d1b4b;
+}

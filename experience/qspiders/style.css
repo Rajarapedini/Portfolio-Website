@@ -1,0 +1,53 @@
+/* ===== Vanix role page — tweaks on top of about.css ===== */
+
+/* logo sits on a clean white card instead of a photo */
+.about-page .bio-hero .photo img {
+  background: #fff;
+  padding: 3rem;
+  max-width: 32rem;
+}
+
+/* bullet lists inside the sections */
+.about-page .bio-section ul {
+  margin: 0.4rem 0 0;
+  padding-left: 1.9rem;
+}
+.about-page .bio-section li {
+  font-size: 1.55rem;
+  line-height: 1.9;
+  color: #555;
+  margin-bottom: 0.7rem;
+}
+.about-page .bio-section li:last-child {
+  margin-bottom: 0;
+}
+.about-page .bio-section li::marker {
+  color: rgb(115, 3, 167);
+}
+.about-page .bio-section li strong {
+  color: #0e2431;
+}
+
+/* placeholder badge when there is no company logo */
+.about-page .bio-hero .photo.intro-only {
+  display: flex;
+  justify-content: center;
+}
+.about-page .bio-hero .photo .name-badge {
+  width: 18rem;
+  height: 18rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2rem;
+  background: linear-gradient(135deg, #2506ad, #4b1fa8);
+  color: #fff;
+  font-size: 5rem;
+  font-weight: 800;
+  font-family: "Nunito", sans-serif;
+  letter-spacing: 0.1rem;
+  box-shadow: 0 1.2rem 3rem rgba(37, 6, 173, 0.3);
+}
+.about-page .bio-hero .photo.intro-only img {
+  display: none;
+}

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Rajarao Pedini at NIELIT Daman — a summer internship in computer networking: IP addressing, IPv4/IPv6, network layers, routers and static routing." />
+    <link rel="canonical" href="https://www.rajaraopedini.in/experience/nielit/" />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="/CSS/style.css" />
+    <link rel="stylesheet" href="/about/about.css" />
+    <link rel="stylesheet" href="/experience/nielit/style.css" />
+    <link rel="icon" id="favcon" href="/images/avatar.jpg" />
+    <title>NIELIT Daman · My Role | Rajarao Pedini</title>
+</head>
+
+<body>
+    <!-- navbar starts -->
+    <header>
+        <a href="/" class="logo"><img src="/images/logorr.png" alt="Rajarao Pedini logo">Rajarao</a>
+        <div id="menu" class="bx bx-menu" role="button" aria-label="Open menu"></div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="/#home">Home</a></li>
+                <li><a href="/#about">About</a></li>
+                <li><a href="/#skills">Skills</a></li>
+                <li><a href="/#education">Education</a></li>
+                <li><a class="active" href="/#experience">Experience</a></li>
+                <li><a href="/#work">Work</a></li>
+                <li><a href="/#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- navbar ends -->
+
+    <section class="about-page">
+        <h2 class="heading"><i class="bx bxs-graduation"></i> My Training at <span>NIELIT</span></h2>
+
+        <!-- hero -->
+        <div class="bio-hero">
+            <div class="photo">
+                <img draggable="false" src="/images/nielit.jpeg" alt="NIELIT Daman" />
+            </div>
+            <div class="intro">
+                <h3>Computer Networking</h3>
+                <span class="role">National Institute of Electronics &amp; Information Technology ·
+                    Daman · 2 weeks</span>
+                <p>A two-week summer internship where I learned the fundamentals of computer
+                    networking — from how networks are built up in layers to configuring routing by
+                    hand.</p>
+                <div class="hero-btns">
+                    <a href="/#experience" class="btn outline"><span>Back to experience</span> <i
+                            class="fas fa-arrow-left"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- highlights -->
+        <div class="bio-body">
+            <div class="facts">
+                <div class="fact">
+                    <span class="fact-label">Program</span>
+                    <span class="fact-value">Computer Networking</span>
+                </div>
+                <div class="fact">
+                    <span class="fact-label">Type</span>
+                    <span class="fact-value">Summer Internship</span>
+                </div>
+                <div class="fact">
+                    <span class="fact-label">Duration</span>
+                    <span class="fact-value">2 weeks</span>
+                </div>
+                <div class="fact">
+                    <span class="fact-label">Location</span>
+                    <span class="fact-value">Daman · Offline</span>
+                </div>
+            </div>
+
+            <div class="bio-section">
+                <h4><i class="fas fa-network-wired"></i> Networking fundamentals</h4>
+                <ul>
+                    <li>Learned the basics of computer networks and how devices communicate.</li>
+                    <li>Studied the layers of a network and the role each layer plays in moving
+                        data.</li>
+                    <li>Understood common network topologies and how LANs are set up.</li>
+                </ul>
+            </div>
+
+            <div class="bio-section">
+                <h4><i class="fas fa-location-crosshairs"></i> IP addressing</h4>
+                <ul>
+                    <li>Worked with IP addresses and the difference between <strong>IPv4</strong> and
+                        <strong>IPv6</strong>.</li>
+                    <li>Covered the basics of subnetting and how addresses are assigned on a network.</li>
+                </ul>
+            </div>
+
+            <div class="bio-section">
+                <h4><i class="fas fa-route"></i> Routing &amp; setup</h4>
+                <ul>
+                    <li>Learned how routers work and how to establish a network from scratch.</li>
+                    <li>Configured <strong>static routing</strong> hands-on to connect networks.</li>
+                    <li>Got a feel for switching and how traffic is directed within a network.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="backbtn">
+            <a href="/#experience" class="btn">
+                <i class="bx bx-left-arrow-alt"></i>
+                <span>Back to Home</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- scroll top btn -->
+    <a href="#" aria-label="ScrollTop" class="bx bx-chevron-up-circle" id="scroll-top"></a>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#menu').click(function () {
+                $(this).toggleClass('bx-menu bx-x');
+                $('.navbar').toggleClass('nav-toggle');
+            });
+            $(window).on('scroll load', function () {
+                $('#menu').removeClass('bx-x').addClass('bx-menu');
+                $('.navbar').removeClass('nav-toggle');
+                if (window.scrollY > 60) {
+                    document.querySelector('#scroll-top').classList.add('active');
+                } else {
+                    document.querySelector('#scroll-top').classList.remove('active');
+                }
+            });
+            $('#scroll-top').on('click', function (e) {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        });
+        if (window.matchMedia('(hover: hover)').matches && window.VanillaTilt) {
+            VanillaTilt.init(document.querySelector('.bio-hero .photo img'), { max: 10, speed: 400, glare: true, 'max-glare': 0.18 });
+        }
+        document.addEventListener('visibilitychange', function () {
+            if (document.visibilityState === 'visible') {
+                document.title = 'NIELIT Daman · My Role | Rajarao Pedini';
+                $('#favcon').attr('href', '/images/avatar.jpg');
+            } else {
+                document.title = 'Come Back To Portfolio';
+                $('#favcon').attr('href', '/images/favhand.png');
+            }
+        });
+    </script>
+</body>
+
+</html>

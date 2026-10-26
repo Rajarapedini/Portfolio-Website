@@ -385,3 +385,7 @@ header .navbar ul li a:hover{
   }
 }
 /* scroll top ends */
+/* justify project card descriptions */
+.work .box-container .box p {
+  text-align: justify;
+}

@@ -1,0 +1,211 @@
+/* ===== About detail page ===== */
+.about-page {
+  background: #eef2fb;
+  padding-top: 10rem;
+  padding-bottom: 4rem;
+  min-height: 100vh;
+}
+
+/* hero: photo + intro */
+.about-page .bio-hero {
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 100rem;
+  margin: 3rem auto 0;
+}
+.about-page .bio-hero .photo {
+  flex: 1 1 28rem;
+}
+.about-page .bio-hero .photo img {
+  width: 100%;
+  max-width: 34rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 1.2rem 3rem rgba(0, 0, 0, 0.22);
+  display: block;
+  margin: 0 auto;
+}
+.about-page .bio-hero .intro {
+  flex: 1 1 34rem;
+}
+.about-page .bio-hero .intro h3 {
+  font-size: 3rem;
+  color: #0e2431;
+}
+.about-page .bio-hero .intro .role {
+  display: inline-block;
+  color: rgb(115, 3, 167);
+  font-weight: 600;
+  font-size: 1.6rem;
+  margin: 0.6rem 0 1.6rem;
+}
+.about-page .bio-hero .intro p {
+  font-size: 1.6rem;
+  line-height: 1.9;
+  color: #444;
+}
+.about-page .hero-btns {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 2.2rem;
+}
+
+/* buttons (light background, so override the dark-section defaults) */
+.about-page .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 1.2rem 2.4rem;
+  border-radius: 0.8rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: "Nunito", sans-serif;
+  background: #2506ad;
+  color: #fff;
+  border: 2px solid #2506ad;
+  box-shadow: 0 0.5rem 1.2rem rgba(48, 68, 247, 0.3);
+  transition: 0.3s;
+}
+.about-page .btn span {
+  color: inherit;
+}
+.about-page .btn.outline {
+  background: transparent;
+  color: #2506ad;
+  box-shadow: none;
+}
+.about-page .btn:hover {
+  background: #421cec;
+  border-color: #421cec;
+  color: #fff;
+}
+.about-page .btn i {
+  transition: 0.3s;
+}
+.about-page .btn:hover i {
+  transform: translateX(4px);
+}
+
+/* detailed bio */
+.about-page .bio-body {
+  max-width: 90rem;
+  margin: 4rem auto 0;
+}
+.about-page .bio-section {
+  margin-bottom: 2.2rem;
+  padding: 2.5rem;
+  background: #fff;
+  border-radius: 1.2rem;
+  box-shadow: 0 0.6rem 1.8rem rgba(0, 0, 0, 0.06);
+}
+.about-page .bio-section h4 {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  font-size: 2rem;
+  color: #0e2431;
+  margin-bottom: 1.3rem;
+}
+.about-page .bio-section h4 i {
+  color: rgb(115, 3, 167);
+}
+.about-page .bio-section p {
+  font-size: 1.55rem;
+  line-height: 1.9;
+  color: #555;
+  margin-bottom: 1rem;
+}
+.about-page .bio-section p:last-child {
+  margin-bottom: 0;
+}
+
+/* facts */
+.about-page .facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 1.2rem;
+  margin-top: 2rem;
+}
+.about-page .fact {
+  background: #f3f0fb;
+  border-radius: 0.8rem;
+  padding: 1.2rem 1.5rem;
+}
+.about-page .fact-label {
+  display: block;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: rgb(115, 3, 167);
+  margin-bottom: 0.3rem;
+}
+.about-page .fact-value {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #0e2431;
+}
+
+/* quote */
+.about-page .bio-quote {
+  max-width: 90rem;
+  margin: 3rem auto 0;
+  font-size: 1.9rem;
+  font-style: italic;
+  line-height: 1.7;
+  color: #2506ad;
+  border-left: 0.5rem solid #2506ad;
+  padding: 0.6rem 0 0.6rem 2.5rem;
+}
+
+/* back button on a light page */
+.about-page .backbtn {
+  margin: 4rem 0 1rem;
+}
+.about-page .backbtn .btn {
+  background: #2506ad;
+  border: 2px solid #2506ad;
+  color: #fff;
+  box-shadow: 0 0.5rem 1.2rem rgba(48, 68, 247, 0.3);
+}
+.about-page .backbtn .btn span {
+  color: #fff;
+}
+.about-page .backbtn .btn:hover {
+  background: #421cec;
+  color: #fff;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+  .about-page {
+    padding-top: 9rem;
+  }
+  .about-page .bio-hero {
+    text-align: center;
+  }
+  .about-page .bio-hero .intro {
+    text-align: left;
+  }
+  .about-page .hero-btns {
+    justify-content: center;
+  }
+}
+@media (max-width: 450px) {
+  .about-page .bio-section {
+    padding: 1.8rem;
+  }
+  .about-page .bio-quote {
+    font-size: 1.7rem;
+    padding-left: 1.8rem;
+  }
+}
+
+/* justify content paragraphs and lists on detail/about pages */
+.about-page .bio-hero .intro p,
+.about-page .bio-section p,
+.about-page .bio-section li,
+.about-page .journey-sub {
+  text-align: justify;
+}

@@ -4,6 +4,7 @@
     "desc": "Personal Portfolio Website. Don't Need Much Info About It, Just Scroll Down. You're Here Only!",
     "image": "portfolio1",
     "category": "basicweb",
+    "self": true,
     "links": {
       "view": "#",
       "code": "https://github.com/Rajarapedini/Portfolio-Website"
@@ -34,6 +35,7 @@
     "desc": "It shows temples of different sectors of India. as user clicks it will redirect to wiki of that temple for info.",
     "image": "templeweb",
     "category": "basicweb",
+    "hidden": true,
     "links": {
       "view": "#",
       "code": "#"
